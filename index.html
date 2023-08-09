@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+        var tabLinks = document.getElementsByClassName('tab-links');
+        var tabContents = document.getElementsByClassName('tab-contents');
+
+        function openTab(tabName) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove('active-link');
+            }
+            for (tabContent of tabContents) {
+                tabContent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+        document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        document.querySelector('.fas.fa-times').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.remove('show');
+        });
+
+    </script>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+               <h1>Mahesh</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <i class="fas fa-times"></i>
+                </ul>
+                <i class="fas fa-bars"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Designer</p>
+                <h1>Hi, I'm <span>Mahesh</span><br>Ghusalkar From Mumbai</h1>
+            </div>
+        </div>
+    </div>
+	
+	<div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="mahesh.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello My Name is Mahesh Ashok Ghusalkar. I am Hard-Working graduate Specialised Bachelor of Computer Science with Overal CGPA OF 7.87  Along with my Degree, I Completed Full-Stack Developer Course From CNC WEB WORLD INSTITUTE and the various Technologies I learnt has helped me develop my projects. My Goal is to build a Successful Carrer as a Software Developer. I have done a 2  month internship with the Tata Jee Group and loved my experience. My Skills are my analytical approach, communication and problem solving skills.  </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+						<p class="tab-links" onclick="openTab('Linkedln')">Linkedln</p>
+						<p class="tab-links" onclick="openTab('Github')">Github</p>
+                    </div>
+					<div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Design</span><br>Designing Web/App interfaces</li>
+                            <li><span>Front-End-Developer</span><br>Web app Development</li>
+                            <li><span>Backend-Developer</span><br>Building Websites</li>
+                        </ul>
+                    </div>
+					 
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>Full-Stack Developer Course From CNC Web World </li>
+                            <li><span>2021</span><br>BSC CS From S.K.Tilak College <br> CGPA: 7.87</li>
+                            <li><span>2018</span><br>12th From ICLE'S College <br>  Percentage:58.60</li>
+                        </ul>
+                    </div>
+					<div class="tab-contents" id="Linkedln">
+					<ul>
+					<li><br>Linkedln Profile Link :<a href="https://www.linkedin.com/in/mahesh-ghusalkar-995374203">Click here </a></li>
+                </div>
+				<div class="tab-contents" id="Github">
+				<ul>
+				<li><br>Github Profile Link : <a href="https://github.com/mahi7906">Click here</a></li>
+				</div>
+				
+            </div>
+        </div>
+    </div>
+	
+	<div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>Backend-Developer</h2>
+                    <p></p>
+                   
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Front-End-Developer</h2>
+                    <p></p>
+                   
+
+                </div>
+                <div>
+
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Web Design</h2>
+                    <p></p>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div class="portfolio">
+	<div class="container">
+	<h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work.png" alt="">
+                    <div class="layer">
+                        
+                        <h2>Car Showroom Website</h2>
+                        <a href="https://github.com/mahi7906/car.git">Learn More<i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work2.png" alt="">
+                    <div class="layer">
+                        <h2> Portfolio</h2>
+                        <p></p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work3.png" alt="">
+                    <div class="layer">
+                        <h2>Personal Blog Website</h2>
+
+                        <a href="https://github.com/mahi7906/Blog.git">Learn More<i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="btn">See more</a>
+        </div>
+    </div>
+	 
+	 <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>ghusalkarmahesh@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>9082600651</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</body>
+</html>
